@@ -131,6 +131,7 @@ android {
         applicationId "com.receason"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
         aaptOptions{
@@ -182,6 +183,8 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation project(':@react-native-firebase_firestore')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
