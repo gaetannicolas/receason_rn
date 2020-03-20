@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "625342742295",
+    "firebase_url": "https://receason.firebaseio.com",
+    "project_id": "receason",
+    "storage_bucket": "receason.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625342742295:android:aae02ea766b0eae7464152",
+        "android_client_info": {
+          "package_name": "com.receason"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625342742295-qoomab9ba27ngl93ina4qj41fcbaucus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8E6lyHknZzFTWJYVs0MLv7fpiTYwOeV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "625342742295-qoomab9ba27ngl93ina4qj41fcbaucus.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "625342742295-qerevuim80bsba9rqqlk37tp3pa7dqhb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "receason"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
