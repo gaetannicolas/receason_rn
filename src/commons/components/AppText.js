@@ -59,11 +59,6 @@ const getStyle = (userStyle) => {
     style.fontFamily = fontMapping.italic
   }
 
-  // For IOS, Regular font is non specific font.
-  if (Platform.OS === 'ios' && style.fontFamily === 'IBMPlexSans-Regular') {
-    style.fontFamily = 'IBMPlexSans'
-  }
-
   if (Platform.OS === 'android') {
     style.fontWeight = 'normal'
     style.fontStyle = 'normal'
@@ -73,29 +68,29 @@ const getStyle = (userStyle) => {
 }
 
 const fontMapping = {
-  normal: 'IBMPlexSans-Regular',
-  bold: 'IBMPlexSans-Bold',
-  semibold: 'IBMPlexSans-SemiBold',
-  100: 'IBMPlexSans-Thin',
-  200: 'IBMPlexSans-ExtraLight',
-  300: 'IBMPlexSans-Light',
-  400: 'IBMPlexSans-Regular',
-  500: 'IBMPlexSans-Text',
-  600: 'IBMPlexSans-Medium',
-  700: 'IBMPlexSans-SemiBold',
-  800: 'IBMPlexSans-Bold',
-  900: 'IBMPlexSans-Bold',
-  italic: 'IBMPlexSans-Italic',
-  boldItalic: 'IBMPlexSans-BoldItalic',
-  '100Italic': 'IBMPlexSans-ThinItalic',
-  '200Italic': 'IBMPlexSans-ExtraLightItalic',
-  '300Italic': 'IBMPlexSans-LightItalic',
-  '400Italic': 'IBMPlexSans-Italic',
-  '500Italic': 'IBMPlexSans-TextItalic',
-  '600Italic': 'IBMPlexSans-MediumItalic',
-  '700Italic': 'IBMPlexSans-SemiBoldItalic',
-  '800Italic': 'IBMPlexSans-BoldItalic',
-  '900Italic': 'IBMPlexSans-BoldItalic',
+  normal: 'Quicksand-Regular',
+  bold: 'Quicksand-Bold',
+  semibold: 'Quicksand-SemiBold',
+  100: 'Quicksand-Light',
+  200: 'Quicksand-Light',
+  300: 'Quicksand-Light',
+  400: 'Quicksand-Regular',
+  500: 'Quicksand-Text',
+  600: 'Quicksand-Medium',
+  700: 'Quicksand-SemiBold',
+  800: 'Quicksand-Bold',
+  900: 'Quicksand-Bold',
+  italic: 'Quicksand-Regular',
+  boldItalic: 'Quicksand-Regular',
+  '100Italic': 'Quicksand-Regular',
+  '200Italic': 'Quicksand-Regular',
+  '300Italic': 'Quicksand-Regular',
+  '400Italic': 'Quicksand-Regular',
+  '500Italic': 'Quicksand-Regular',
+  '600Italic': 'Quicksand-Regular',
+  '700Italic': 'Quicksand-Regular',
+  '800Italic': 'Quicksand-Regular',
+  '900Italic': 'Quicksand-Regular',
 }
 
 

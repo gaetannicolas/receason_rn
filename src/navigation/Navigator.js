@@ -1,19 +1,131 @@
 import React from 'react'
-import { createAppContainer } from 'react-navigation'
-import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation'
+import { createBottomTabNavigator } from 'react-navigation-tabs'
+import { createStackNavigator } from 'react-navigation-stack'
 import navigationService from './navigationService'
-import Example from '../modules/example/scenes/Example'
+import AuthenticationScreen from './AuthenticationScreen'
+import Products from '../modules/products/scenes/Products'
+import Recipes from '../modules/recipes/scenes/Recipes'
+import Account from '../modules/account/scenes/Account'
+import TabBarIcon from '../commons/components/TabBarIcon'
+import ProductDetail from '../modules/products/scenes/ProductDetail'
+import RecipeDetail from '../modules/recipes/scenes/RecipeDetail'
+import Login from '../modules/authentication/scenes/Login'
 
-
-const RootStack = createStackNavigator(
+const ProductStack = createStackNavigator(
   {
-    Main: {
-      screen: Example,
+    Products: {
+      screen: Products,
       path: '',
+      navigationOptions: {
+        headerShown: false,
+      },
+    },
+    ProductDetail: {
+      screen: ProductDetail,
+      navigationOptions: {
+        headerShown: false,
+      },
     },
   },
   {
-    initialRouteName: 'Main',
+    initialRouteName: 'Products',
+    defaultNavigationOptions: {
+      headerMode: 'none',
+      headerShown: false,
+    },
+  }
+)
+
+const RecipeStack = createStackNavigator(
+  {
+    Recipes: {
+      screen: Recipes,
+      path: '',
+      navigationOptions: {
+        headerShown: false,
+      },
+    },
+    RecipeDetail: {
+      screen: RecipeDetail,
+      navigationOptions: {
+        headerShown: false,
+      },
+    },
+  },
+  {
+    initialRouteName: 'Recipes',
+    defaultNavigationOptions: {
+      headerMode: 'none',
+      headerShown: false,
+    },
+  }
+)
+
+
+const MainTabNavigator = createBottomTabNavigator(
+  {
+    Products: {
+      screen: ProductStack,
+    },
+    Recipes: {
+      screen: RecipeStack,
+    },
+    Account: {
+      screen: Account,
+    },
+  },
+  {
+    mode: 'modal',
+    headerMode: 'none',
+    initialRouteName: 'Products',
+    backBehavior: 'history',
+    defaultNavigationOptions: ({ navigation }) => ({
+      tabBarOptions: {
+        showLabel: false,
+        style: {
+          height: 70,
+          borderTopWidth: 0,
+          paddingLeft: 10,
+          paddingRight: 10,
+          borderTopLeftRadius: 30,
+          borderTopRightRadius: 30,
+          backgroundColor: '#FFFFFF',
+          shadowColor: '#000',
+          shadowOffset: {
+            width: 0,
+            height: 2,
+          },
+          shadowOpacity: 0.25,
+          shadowRadius: 3.84,
+
+          elevation: 5,
+        },
+      },
+      // eslint-disable-next-line react/prop-types
+      tabBarIcon: ({ focused }) => (
+        <TabBarIcon focused={focused} navigation={navigation} />
+      ),
+    }),
+  }
+)
+
+const RootStack = createSwitchNavigator(
+  {
+    AuthenticationScreen: {
+      screen: AuthenticationScreen,
+    },
+    Main: {
+      screen: MainTabNavigator,
+    },
+    Login: {
+      screen: Login,
+    },
+  },
+  {
+    initialRouteName: 'AuthenticationScreen',
+    mode: 'modal',
+    headerMode: 'none',
   }
 )
 
