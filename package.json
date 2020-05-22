@@ -11,18 +11,26 @@
     "prepare": "patch-package"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.10.3",
     "@react-native-community/masked-view": "^0.1.7",
     "@react-native-firebase/app": "6.3.4",
     "@react-native-firebase/firestore": "^6.3.4",
     "i18n-js": "^3.5.1",
+    "moment": "^2.26.0",
     "prop-types": "^15.7.2",
     "react": "16.9.0",
     "react-native": "0.61.5",
     "react-native-gesture-handler": "^1.6.0",
+    "react-native-localize": "^1.2.1",
+    "react-native-reanimated": "^1.7.1",
     "react-native-safe-area-context": "^0.7.3",
     "react-native-screens": "^2.4.0",
     "react-navigation": "^4.3.1",
-    "react-navigation-stack": "^2.3.1"
+    "react-navigation-stack": "^2.3.1",
+    "react-navigation-tabs": "^2.8.7",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
